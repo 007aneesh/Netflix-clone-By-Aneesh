@@ -1,0 +1,555 @@
+:root {
+  --primary-color: red;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(44, 44, 44);
+  color: white;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.showcase {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("../images/home-bg.jpg") no-repeat center center/cover;
+  box-shadow: inset 120px 100px 120px black, inset -120px -100px 120px black;
+}
+.showcase-top {
+  position: relative;
+  height: 90px;
+}
+.showcase-top img {
+  width: 170px;
+  position: absolute;
+  top: 42%;
+  left: 3%;
+}
+
+.showcase-top a {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  margin-right: 10px;
+}
+/*button*/
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.4rem;
+  font-size: 1rem;
+  text-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+}
+.showcase-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 10% auto;
+  z-index: 2;
+}
+.showcase-content h1 {
+  font-size: 4rem;
+}
+.showcase-content p {
+  font-size: 1.5rem;
+  margin: 1% auto;
+}
+form.form1 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+input.email {
+  width: 370px;
+  height: 60px;
+  padding: 15px;
+  outline: none;
+}
+button.submit {
+  position: relative;
+  background: var(--primary-color);
+  color: white;
+  font-size: 2rem;
+
+  border: none;
+  height: 60px;
+  width: 250px;
+  cursor: pointer;
+}
+.content1 {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+  position: relative;
+}
+.content1 div {
+  position: relative;
+  text-align: center;
+
+  justify-content: center;
+  padding: auto;
+  margin: auto;
+}
+.content1 div h1 {
+  font-size: 3rem;
+}
+.content1 div p {
+  font-size: 1.7rem;
+}
+.content1 img {
+  padding: auto;
+}
+
+.content2 {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+  position: relative;
+}
+.content2 div {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  margin: auto;
+}
+.content2 div h1 {
+  font-size: 3rem;
+}
+.content2 div p {
+  font-size: 1.7rem;
+}
+.content2 img {
+  padding: auto;
+}
+
+.content3 {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+  position: relative;
+}
+.content3 div {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  margin: auto;
+}
+.content3 div h1 {
+  font-size: 3rem;
+}
+.content3 div p {
+  font-size: 1.7rem;
+}
+.content3 img {
+  padding: auto;
+}
+
+.content4 {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+  position: relative;
+}
+.content4 div {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  margin: auto;
+}
+.content4 div h1 {
+  font-size: 3rem;
+}
+.content4 div p {
+  font-size: 1.7rem;
+}
+.content4 img {
+  padding: auto;
+}
+/*accordion*/
+.content5 {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+  position: relative;
+}
+
+div.faq {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.accordion {
+  min-width: 400px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: rgb(58, 57, 57);
+}
+.accordion > div {
+  border-bottom: 9px solid black;
+}
+.accordion_label,
+.accordion_content {
+  padding: 14px 25px;
+}
+.accordion_label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.4s;
+}
+.accordion_label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 40px;
+  height: 20px;
+  background: url("../images/plus-solid.svg") no-repeat;
+  background-size: contain;
+  filter: invert(100%);
+  transition: transform ease-out 0.4s;
+}
+.accordion_content {
+  background: rgb(58, 57, 57);
+  border-top: 2px solid black;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  display: none;
+}
+.accordion_input {
+  display: none;
+}
+.accordion_input:checked ~ .accordion_content {
+  display: block;
+}
+.accordion_input:checked ~ .accordion_label::after {
+  background: url("../images/xmark-solid.svg") no-repeat;
+}
+/*footer*/
+footer {
+  background: black;
+  color: gray;
+  padding: 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+footer p {
+  line-height: 1.2cm;
+  text-align: left;
+  margin-left: 11.9%;
+}
+footer div.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px;
+  margin-left: 10%;
+}
+footer div ul li {
+  line-height: 1cm;
+}
+footer div ul li a {
+  color: gray;
+}
+
+/*media query for mobile devices*/
+@media (max-width: 480px) {
+  .showcase {
+    height: 70vh;
+  }
+  .showcase-top img {
+    top: 35%;
+    left: 10%;
+    width: 90px;
+  }
+  .btn {
+    width: 70px;
+  }
+  .showcase-content h1 {
+    font-size: 1.7rem;
+  }
+  .showcase-content p {
+    font-size: 1rem;
+    padding: auto;
+  }
+  .showcase {
+    box-shadow: inset 60px 50px 60px black, inset -60px -50px 60px black;
+  }
+  form.form1 {
+    flex-direction: column;
+  }
+  input.email {
+    width: 80%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.05cm;
+  }
+  button.submit {
+    font-size: 1rem;
+    height: 50px;
+    width: 150px;
+    border-radius: 0.05cm;
+  }
+  .content1 {
+    flex-direction: column;
+    width: auto;
+  }
+  .content1 div h1 {
+    font-size: 1.7rem;
+  }
+  .content1 div p {
+    font-size: 1rem;
+    width: 300px;
+  }
+  .content1 img {
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+
+  .content2 {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .content2 div h1 {
+    font-size: 1.7rem;
+  }
+  .content2 div p {
+    font-size: 1rem;
+    width: auto;
+  }
+  .content2 img {
+    width: auto;
+    height: auto;
+  }
+
+  .content3 {
+    flex-direction: column;
+    width: auto;
+  }
+  .content3 div h1 {
+    font-size: 1.7rem;
+  }
+  .content3 div p {
+    font-size: 1rem;
+    width: auto;
+  }
+  .content3 img {
+    width: auto;
+    height: auto;
+  }
+
+  .content4 {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .content4 div h1 {
+    font-size: 1.7rem;
+  }
+  .content4 div p {
+    font-size: 1rem;
+    width: auto;
+  }
+  .content4 img {
+    width: auto;
+    height: auto;
+  }
+  div.faq h1 {
+    font-size: 1.5rem;
+  }
+  .accordion {
+    min-width: 200px;
+  }
+  .accordion_label {
+    font-size: 1rem;
+  }
+  .accordion_content {
+    font-size: 1.125rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer p {
+    margin-left: 8%;
+  }
+  footer div.main {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0%;
+    grid-gap: 5%;
+    font-size: 0.8rem;
+  }
+}
+/*Media query for tablets and ipads*/
+@media (min-width: 481px) and (max-width: 820px) {
+  .showcase {
+    height: 65vh;
+  }
+  .showcase-top img {
+    top: 35%;
+    left: 8%;
+    width: 100px;
+  }
+  .btn {
+    width: 80px;
+  }
+  .showcase-content h1 {
+    font-size: 3rem;
+  }
+  .showcase-content p {
+    font-size: 1.4rem;
+    padding: auto;
+    max-width: 470px;
+  }
+  .showcase {
+    box-shadow: inset 60px 50px 60px black, inset -60px -50px 60px black;
+  }
+  form.form1 {
+    flex-direction: column;
+  }
+  input.email {
+    width: 65%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.05cm;
+  }
+  button.submit {
+    font-size: 1.2rem;
+    height: 50px;
+    width: 150px;
+    border-radius: 0.05cm;
+  }
+  .content1 {
+    flex-direction: column;
+    width: auto;
+  }
+  .content1 div h1 {
+    font-size: 3rem;
+  }
+  .content1 div p {
+    font-size: 1.4rem;
+    width: 600px;
+  }
+  .content1 img {
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+
+  .content2 {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .content2 div h1 {
+    font-size: 3rem;
+  }
+  .content2 div p {
+    font-size: 1.4rem;
+    width: auto;
+  }
+  .content2 img {
+    width: auto;
+    height: auto;
+  }
+
+  .content3 {
+    flex-direction: column;
+    width: auto;
+  }
+  .content3 div h1 {
+    font-size: 3rem;
+  }
+  .content3 div p {
+    font-size: 1.4rem;
+    width: auto;
+  }
+  .content3 img {
+    width: auto;
+    height: auto;
+  }
+
+  .content4 {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .content4 div h1 {
+    font-size: 3rem;
+  }
+  .content4 div p {
+    font-size: 1.4rem;
+    width: auto;
+  }
+  .content4 img {
+    width: auto;
+    height: auto;
+  }
+  div.faq h1 {
+    font-size: 3rem;
+  }
+  .accordion {
+    min-width: 400px;
+  }
+  .accordion_content {
+    font-size: 1.4rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer p {
+    margin-left: 8%;
+  }
+  footer div.main {
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 4%;
+    grid-gap: 5%;
+    font-size: 0.8rem;
+  }
+}
